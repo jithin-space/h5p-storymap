@@ -1,0 +1,174 @@
+[
+	{
+		"name": "storymap",
+		"importance":"high",
+		"type": "group",
+		"widget": "wizard",
+		"fields": [
+			{
+				"name": "overview_slide",
+				"type": "group",
+				"label": "Overview",
+				"fields": [
+					{
+						"name": "textContent",
+						"type": "group",
+						"label": "Text Content",
+						"fields": [
+							{
+								"name": "headline",
+								"type": "text",
+								"label": "Headline",
+								"widget": "html",
+								"tags":[
+									"strong",
+        					"em",
+        					"del",
+        					"a",
+        					"ul",
+        					"ol",
+        					"hr",
+									"small"
+								]
+							},
+							{
+								"name": "body",
+								"type": "text",
+								"label": "Body",
+                "widget": "html",
+                "tags":[
+                  "strong",
+        					"em",
+        					"del",
+        					"a",
+        					"ul",
+        					"ol",
+        					"hr"
+                ]
+							}
+						]
+					},
+					{
+						"name": "asset",
+						"type": "group",
+						"label": "Asset",
+						"importance": "low",
+						"fields": [
+							{
+								"name": "media",
+								"type": "text",
+								"label": "Media"
+							},
+							{
+								"name": "credit",
+								"type": "text",
+								"label": "Credits"
+							},
+							{
+								"name": "caption",
+								"type": "text",
+								"label": "Caption"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "event_slides",
+				"type": "list",
+				"widgets": [
+			      {
+			        "name": "VerticalTabs",
+			        "label": "Default"
+			      }
+			    ],
+				"label": "Event Slides",
+				"min": 1,
+				"field": {
+					"name": "event",
+					"type": "group",
+					"label": "Event",
+					"fields": [
+						{
+							  "name": "location",
+							  "type": "group",
+							  "label": "Location",
+								"widget": "locationPicker",
+							  "fields": [
+							    {
+							      "name": "latitude",
+							      "type": "text",
+							      "label": "Latitude",
+							      "description": "latitude of the location",
+										"regexp":{
+									    "pattern": "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?)$"
+									  }
+							    },
+							    {
+							      "name": "longitude",
+							      "type": "text",
+							      "label": "Longitude",
+							      "description": "longitude of the location",
+										"regexp":{
+									    "pattern": "^[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$"
+									  }
+							    }
+							  ]
+							},
+						{
+							"name": "textContent",
+							"type": "group",
+							"label": "Text Content",
+							"fields": [
+								{
+									"name": "headline",
+									"type": "text",
+									"label": "Headline"
+								},
+								{
+									"name": "body",
+									"type": "text",
+									"label": "Body",
+                  "widget": "html",
+                  "tags":[
+                    "strong",
+          					"em",
+          					"del",
+          					"a",
+          					"ul",
+          					"ol",
+          					"hr"
+                  ]
+
+								}
+							]
+						},
+						{
+							"name": "asset",
+							"type": "group",
+							"label": "Asset",
+							"importance": "low",
+							"fields": [
+								{
+									"name": "media",
+									"type": "text",
+									"label": "Media"
+								},
+								{
+									"name": "credit",
+									"type": "text",
+									"label": "Credits"
+								},
+								{
+									"name": "caption",
+									"type": "text",
+									"label": "Caption"
+								}
+							]
+						}
+					]
+				}
+			}
+		]
+	}
+]

@@ -1,0 +1,47 @@
+{
+  "title": "Story Map",
+  "description": "Tell stories with the help of a map",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "fullscreen": 1,
+  "machineName": "H5P.StoryMap",
+  "author": "jithin-space",
+  "license": "MIT",
+  "embedTypes": ["iframe"],
+  "preloadedCss": [
+    {
+      "path": "storymap.css"
+    }
+  ],
+  "preloadedJs":[
+    {
+      "path": "h5p-storymap.js"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "StorymapJS",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ],
+  "editorDependencies" : [
+    {
+      "machineName": "H5PEditor.LocationPicker",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+    "machineName": "H5PEditor.Wizard",
+    "majorVersion": 1,
+    "minorVersion": 2
+  },
+  {
+			"machineName": "H5PEditor.VerticalTabs",
+			"majorVersion": 1,
+			"minorVersion": 3
+		}
+  ]
+}
